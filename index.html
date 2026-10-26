@@ -49,8 +49,8 @@
                 console.log("Playing custome mode.");
       }
       // Outputting the results to the paragraph element and writing to the console.
-      let htmlMessage= `${userName}, You picked ${playerPick}!<br>The computer picked ${computerPick}!`;
-      let consoleMessage= `${userName}, You picked ${playerPick}!\nThe computer picked ${computerPick}!`;
+      let htmlMessage= `${userName}, You picked ${playerPick}!<br>The computer picked ${computerPick}!<br>${outcomeMessage}`;
+      let consoleMessage= `${userName}, You picked ${playerPick}!\nThe computer picked ${computerPick}!\n${outcomeMessage}`;
       
       document.getElementById("displayOutput"). innerHTML= htmlMessage;
       console.log(consoleMessage);
