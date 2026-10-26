@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Fixed viewport typo: initial-scale=1.0 -->
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <meta name="author" content="Adina">
+    <title>Bear Hunter Ninja</title>
+  </head>
+  <body>
+    
+    <p id="displayOutput"></p>
+    <script>
+      // Greet them and ask their name
+      let userName=prompt("Welcome to Bear Hunter Ninja! Please enter your name to get started:");
+      alert(`Hi ${userName} Let\'s Play!!`);
+
+      // Let player choose their pick
+      let playerPick= prompt("Who are you: Bear, Ninja, or Hunter?");
+      let computerPick= "Bear";
+
+      // Var to store the game winner result
+      let outcomeMessage = "";
+      // using if...esle if...else to evaluate all outcomes
+      if (playerPick === computerPick) {
+        outcomeMessage = "It\'s a tie!";
+      } else if (playerPick === "Ninja" && computerPick === "Bear") {
+        outcomeMessage = "The computer wins! Bear beats Ninja.";
+      } else if (playerPick === "Hunter" && computerPick === "Bear") {
+        outcomeMessage = `${userName} wins! Hunter beats Bear.`;
+      } else if (playerPick === "Bear" && computerPick === "Ninja") {
+        outcomeMessage = `${userName} wins! Bear beats Ninja.`;
+      } else if (playerPick === "Ninja" && computerPick === "Hunter") {
+        outcomeMessage = `${userName} wins! Ninja beats Hunter.`;
+      } else if (playerPick === "Hunter" && computerPick === "Ninja") {
+        outcomeMessage = "The computer wins! Ninja beats Hunter.";
+      } else if (playerPick === "Bear" && computerPick === "Hunter") {
+        outcomeMessage = "The computer wins! Hunter beats Bear.";
+      } else {
+        outcomeMessage = "Please check your input choice.";
+      }
+        // switch statement to checkgame settings
+      let gameMode = "standard";
+      switch (gameMode){
+        case "standard":
+            console.log("Playing standard single-match mode.");
+            break;
+            default:
+                console.log("Playing custome mode.");
+      }
+      // Outputting the results to the paragraph element and writing to the console.
+      let htmlMessage= `${userName}, You picked ${playerPick}!<br>The robot picked ${robotPick}!`;
+      let consoleMessage= `${userName}, You picked ${playerPick}!\nThe robot picked ${robotPick}!`;
+      
+      document. getElementById("displayOutput"). innerHTML= htmlMessage;
+      console.log(consoleMessage);
+    </script>  
+  </body>
+</html>
